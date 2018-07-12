@@ -1,3 +1,5 @@
+# We cloned this because the original maintainer is afk. Delete it and switch back once they fix the webpack 4 issue.
+
 # serviceworker-webpack-plugin
 
 > Simplifies creation of a service worker to serve your webpack bundles.
