@@ -3,6 +3,7 @@
 import path from 'path'
 import SingleEntryPlugin from 'webpack/lib/SingleEntryPlugin'
 import minimatch from 'minimatch'
+import webpack from 'webpack';
 
 function validatePaths(assets, options) {
   const depth = options.filename.replace(/^\//, '').split('/').length
@@ -176,6 +177,7 @@ export default class ServiceWorkerPlugin {
     assets = validatePaths(assets, this.options)
 
     let minify;
+    
     if (Number(webpack.version[0]) >= 4) {
       minify = compiler.options.optimization && compiler.options.optimization.minimize
     } else {
