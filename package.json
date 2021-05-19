@@ -1,6 +1,6 @@
 {
   "name": "@crimson-education/serviceworker-webpack-plugin",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Simplifies creation of a service worker to serve your webpack bundles",
   "main": "lib/index.js",
   "files": [
@@ -41,7 +41,7 @@
     "minimatch": "^3.0.4"
   },
   "peerDependencies": {
-    "webpack": "^4"
+    "webpack": "^5.37.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.0",
@@ -83,7 +83,7 @@
     "rimraf": "^3.0.2",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
-    "webpack": "^5.24.3",
+    "webpack": "5.37.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
   }

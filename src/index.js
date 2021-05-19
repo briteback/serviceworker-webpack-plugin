@@ -109,14 +109,16 @@ export default class ServiceWorkerPlugin {
     // Fix for "Uncaught TypeError: __webpack_require__(...) is not a function"
     // Hot module replacement requires that every child compiler has its own
     // cache. @see https://github.com/ampedandwired/html-webpack-plugin/pull/179
-    childCompiler.hooks.compilation.tap('sw-plugin-compilation', compilation2 => {
+    childCompiler.hooks.compilation.tap('sw-plugin-compilation', compilation2 => {      
       if (compilation2.cache) {
         if (!compilation2.cache[COMPILER_NAME]) {
           compilation2.cache[COMPILER_NAME] = {}
         }
         compilation2.cache = compilation2.cache[COMPILER_NAME]
       }
-    })
+    });
+
+    
 
     // Compile and return a promise.
     return new Promise((resolve, reject) => {
